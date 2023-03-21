@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SmartFix</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <img src="Images/logo-nav.png" alt="SmartFix" style="height: 42px;">
+    <nav>
+
+        <div class="info-navbar">
+          <div class="icons-social-media">
+            <img src="Images/instagram.png" alt="">
+
+            <img src="Images/facebook.png" alt="">
+          </div>  
+          
+
+            <div>
+              <img src="Images/phone-menu-mobile.png" alt="">
+              <p>813 280 5227</p>
+            </div>
+
+
+            <div>
+              <img src="Images/mail-menu-mobile.png" alt="">
+              <p>sfappliancepro@gmail.com</p>
+            </div>
+        </div>
+
+        <div class="menu-items">
+          <ul>
+            <li><a href="Index.html" class="inactive-page">Home</a></li>
+            <li><a href="Pricing.html" class="inactive-page">Pricing</a></li>
+            <li><a href="Contact.html" class="active-page">Contact</a></li>
+          </ul>
+        </div>
+
+
+        
+          <div class="menu-icon">
+            <i class="fa fa-bars"><img src="Images/Menu.svg" alt=""></i>
+          </div>
+
+          <div class="mobile-menu">
+            <ul>
+              <li><a href="Index.html" class="inactive-page">Home</a></li>
+              <li><a href="Pricing.html" class="inactive-page">Pricing</a></li>
+              <li><a href="Contact.html" class="active-page">Contact</a></li>
+            </ul>
+
+
+          <div class="contact-info">
+            <div class="social-media">
+              <img src="Images/instagram.png" alt="">
+              <img src="Images/facebook.png" alt="">
+            </div>
+
+            <div class="info-mobile-nav">
+              <div>
+                <img src="Images/phone-menu-mobile.png" alt="">
+                <p>813 280 5227</p>
+              </div>
+
+
+              <div>
+                <img src="Images/mail-menu-mobile.png" alt="">
+                <p>sfappliancepro@gmail.com</p>
+              </div>
+
+
+              <div class="location-nav">
+                <img src="Images/location-menu-mobile.png" alt="">
+                <p>Hillsborough and pinellas county</p>
+              </div>
+            
+            </div>
+          </div>
+
+        
+        </div>
+      
+      </nav>
+  </header>
+
+  <script>
+    // Get the menu icon element
+  const menuIcon = document.querySelector('.menu-icon');
+  
+  // Get the mobile menu element
+  const mobileMenu = document.querySelector('.mobile-menu');
+  
+  // Add a click event listener to the menu icon
+  menuIcon.addEventListener('click', () => {
+    // Toggle the "clicked" class on the menu icon
+    menuIcon.classList.toggle('clicked');
+  });
+  
+  </script>
+
+
+<div  class="image-contact">
+  <img  src="Images/Contact.png" alt="">
+
+</div>
+
+
+
+
+
+
+
+
+
+
+  <div class="form">
+
+    <h3>Request a visit and get $30 USD off!</h3>
+
+   <form action="https://formsubmit.co/sof.beiras@gmail.com" method="POST" enctype="multipart/form-data">
+      <label for="Name">Name</label>
+      <input type="text" id="Mame" name="Name" required>
+
+      <label for="Email">Email</label>
+      <input type="email" id="email" name="Email" required>
+
+      <label for="Phone">Phone number</label>
+      <input type="number" id="phone" name="Phone" required>
+
+      <label for="Available">When are you available for a visit?</label>
+      <input type="text" id="Available" name="Available" required>
+
+      <label for="Subject">Subject</label>
+      <input type="text" id="subject" name="Subject" required>
+
+      <label for="Message">Message</label>
+      <textarea id="message" name="Message" rows="5" required></textarea>
+
+
+      <div style="justify-content: center;">
+        <div style="background-color: #E0E0E0; width: 100%; height: 1px; margin: 40px 0px;"></div>
+      </div>
+
+      <h4 style="margin-bottom: 0px;">GET $30 USD OFF!</h4>
+      <p style="margin-bottom: 16px;">Attach an image of the model number and serial number and </p>
+
+
+
+      <div class="drag-and-drop">
+
+        <div class="drag-area">
+          <div class="file-input">
+            <input type="file" id="fileInput" name="image" accept="application/pdf, image/png, image/gif, image/jpeg" multiple>
+            <label for="fileInput"> <img src="Images/upload.png" alt="">Choose File</label>
+          </div>
+        </div>
+
+        <div class="file-list">
+          <ul id="fileList"></ul>
+        </div>
+
+      </div>
+
+      <br>
+      
+      <button type="submit" class="upload-btn" onclick="SubmitEvent">Send visit request</button>
+
+
+    </form>
+
+
+
+
+    <script>
+    const fileInput = document.getElementById("fileInput");
+      const fileList = document.getElementById("fileList");
+      
+      fileInput.addEventListener("change", handleFileUpload);
+      fileList.addEventListener("click", handleFileDelete);
+      
+      function handleFileUpload(event) {
+        const files = event.target.files;
+        for (let i = 0; i < files.length; i++) {
+          const file = files[i];
+          const li = document.createElement("li");
+          li.innerHTML = `
+            <div class="file-name">${file.name}</div>
+            <div class="delete">&times;</div>
+          `;
+          fileList.appendChild(li);
+        }
+      }
+      
+      function handleFileDelete(event) {
+        if (event.target.classList.contains("delete")) {
+          const li = event.target.parentNode;
+          fileList.removeChild(li);
+        }
+      }
+    </script>
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  <footer class="footer">
+    <img src="Images/footer-logo.png"
+      style="flex-grow: 0; flex-shrink: 0; width: 69.16px; height: 74.87px; object-fit: none;" />
+
+
+    <div class="footer-text">
+      <div>
+        <img src="Images/phone-footer.png" alt="">
+        <p>813 280 5227</p>
+      </div>
+
+
+      <div>
+        <img src="Images/mail-footer.png" alt="">
+        <p>sfappliancepro@gmail.com</p>
+      </div>
+
+
+      <div>
+        <img src="Images/loccation-footer.png" alt="">
+        <p>Hillsborough and pinellas county</p>
+      </div>
+    </div>
+
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
