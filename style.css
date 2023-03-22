@@ -21,8 +21,6 @@ body {
 
 
 
-
-
 ul {
     list-style: none;
     display: flex;
@@ -196,6 +194,8 @@ p {
 
     .triangle {
         width: 50%;
+        justify-content: center;
+        display: flex;
     }
 
     .triangle img {
@@ -320,6 +320,8 @@ p {
         margin-left: 0px;
         margin-bottom: 24px;
     }
+
+    
 
     .footer-text div {
         margin-left: 0px;
@@ -756,6 +758,10 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
 }
 
 
